@@ -5,23 +5,23 @@ var myApp = angular.module("myApp", ["ngRoute"]);
 myApp.config(function ($routeProvider, $locationProvider) {
     $routeProvider
     .when("/", {
-        templateUrl: "app/views/dashboard.html",
+        templateUrl: "app/dashboard/dashboard.html",
         controller: "DashboardController"
     })
     .when("/Namespaces", {
-        templateUrl: "app/views/namespaces.html",
+        templateUrl: "app/namespaces/namespaces.html",
         controller: "NamespacesController"
     })
     .when("/UserManagement", {
-        templateUrl: "app/views/usermanagement.html",
+        templateUrl: "app/usermanagement/usermanagement.html",
         controller: "UserManagementController"
     })
     .when("/AccountDetails", {
-        templateUrl: "app/views/accountdetails.html",
+        templateUrl: "app/account/accountdetails.html",
         controller: "AccountDetailsController"
     })
     .when("/Payment", {
-        templateUrl: "app/views/payment.html",
+        templateUrl: "app/payment/payment.html",
         controller: "PaymentController"
     })
     $locationProvider.html5Mode({

@@ -14,7 +14,7 @@ namespace sb360.Controllers
 {
     public class UsersController : ApiController
     {
-        private sb360Entities db = new sb360Entities();
+        private TrailDbEntities db = new TrailDbEntities();
 
         // GET: api/Users
         public IQueryable<User> GetUsers()

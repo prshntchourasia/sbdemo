@@ -13,10 +13,10 @@ namespace sb360.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class sb360Entities : DbContext
+    public partial class TrailDbEntities : DbContext
     {
-        public sb360Entities()
-            : base("name=sb360Entities")
+        public TrailDbEntities()
+            : base("name=TrailDbEntities")
         {
         }
     
