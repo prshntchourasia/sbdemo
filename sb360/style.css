@@ -60,3 +60,35 @@
         height:137.2% !important;
 
     }
+    .bell-align{
+        color: white;
+        font-size: 1.33333333em !important;
+        line-height: .75em !important;
+        vertical-align: 15% !important;
+    }
+.nav-plan {
+    background: #44abed;
+    border: #69bcf1 solid 1px;
+    padding: 2px 5px 2px 5px;
+    line-height: 12px;
+    margin: 0 0 0 8px;
+    float: right;
+    text-transform: uppercase;
+}
+.plan-text{
+    padding: 2px 0 0 0;
+    float: left;
+    font-weight: 600;
+}
+.plan-box {
+    background: #495460;
+    border: #566372 solid 1px;
+    color: #fff;
+    font-size: 11px;
+    line-height: 13px;
+    position: relative;
+    padding: 4px 7px;
+    top: 5px;
+    height: 29px;
+    float: left;
+}
