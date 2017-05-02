@@ -1,7 +1,7 @@
 ﻿/// <reference path="C:\Users\prashant\documents\sb360\sb360\Scripts/angular.js" />
 
 myApp.factory("UserApi", function ($http) {
-    var baseUri = "http://sb360.azurewebsites.net/api";
+    var baseUri = "http://sb360api.azurewebsites.net/api";
     var UserApi = {};
 
     UserApi.getUsers = function () {
