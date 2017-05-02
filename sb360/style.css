@@ -92,3 +92,23 @@
     height: 29px;
     float: left;
 }
+.payment-header{
+    background: #8d8d8d;
+    font-size: 18px;
+    font-weight: 300;
+    color: #fff;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+}
+.test{
+        margin: 0 30px 0 0;
+    padding: 0;
+    background: #f2f2f2;
+    width: 225px;
+    height: 280px;
+    display: inline-block;
+    float: left;
+    position: relative;
+    border: #eaeaea solid 1px;
+}
