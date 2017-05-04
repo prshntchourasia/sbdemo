@@ -6,8 +6,6 @@ myApp.factory("UserApi", function ($http) {
 
     UserApi.getUsers = function () {
         return $http.get(baseUri + "/users");
-
-
     };
     UserApi.AddUser = function (user) {
         return $http.post(baseUri + '/users/', user);

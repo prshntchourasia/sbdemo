@@ -16,10 +16,12 @@
     
     /* Set gray background color and 100% height */
     .sidenav {
-      padding-top: 20px;
+      margin-left:-15px;
+      padding-top: 3.5%;
       background-color: #3c454f;
       height: 138.2%;
-      width: 5%;
+      width: 68px;
+      position:fixed;
     }
     
     /* Set black background color, white text and some padding */
@@ -111,4 +113,54 @@
     float: left;
     position: relative;
     border: #eaeaea solid 1px;
+}
+.tb-head{
+        font-weight: 600 !important;
+    font-size: 14px !important;
+    padding: 0;
+    margin: 10px 0 5px 0 !important;
+}
+.tb-structure{
+    margin-top: 14% !important;
+    margin-left: 10% !important;
+}
+.tag{
+    display: inline-block !important;
+    padding: 4px 0 !important;
+    width: 56px !important;
+    overflow: hidden !important;
+    height: 22px !important;
+    text-align: center !important;
+    font-size: 13px !important;
+    line-height: 14px !important;
+    background-color:orange;
+    color: #fff;
+    top: -4px !important;
+    right: -6px !important;
+    position: absolute !important;
+}
+
+.payment-sec{
+    padding: 51px 0 26px 0;
+    position: relative;
+    text-align: center;
+    margin-top:25%
+}
+#wrapper1 {
+    position: relative;
+    background: #fff;
+    display: flex;
+    flex-direction: row;
+    cursor: auto;
+    left: 0;
+    -ms-overflow-style: scrollbar;
+    -ms-overflow-x: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.sidenav-btn:hover {
+    background-color: #384049;
+}
+.active{
+    background-color:#475e77;
 }

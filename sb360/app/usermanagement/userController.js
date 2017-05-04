@@ -15,8 +15,6 @@ myApp.controller("UserManagementController", function ($scope, UserApi) {
                 console.log("finally finished Users");
             });
     };
-        
-   
         $scope.addUser = function () {
             var UserToAdd = {
                 'FirstName': $scope.fname,
@@ -31,7 +29,8 @@ myApp.controller("UserManagementController", function ($scope, UserApi) {
                 $scope.lname = undefined;
                 $scope.email = undefined;
                 $scope.userRole = undefined;
-                
+                angular.element('#myModalHorizontal').modal('hide');
+                getuser();
             })
             .catch(function (response) {
                 console.error('Users error', response.status, response.data);
@@ -64,6 +63,12 @@ myApp.controller("UserManagementController", function ($scope, UserApi) {
              .then(function (response) {
                  $scope.users = response.data;
                  console.log($scope.users);
+                 $scope.fname = undefined;
+                 $scope.lname = undefined;
+                 $scope.email = undefined;
+                 $scope.userRole = undefined;
+                 angular.element('#myModalHorizontal').modal('hide');
+                 getuser();
              })
             .catch(function (response) {
                 console.error('Users error', response.status, response.data);
@@ -80,6 +85,7 @@ myApp.controller("UserManagementController", function ($scope, UserApi) {
              .then(function (response) {
                  $scope.users = response.data;
                  console.log($scope.users);
+                 getuser();
              })
             .catch(function (response) {
                 console.error('Users error', response.status, response.data);

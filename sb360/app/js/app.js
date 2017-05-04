@@ -30,22 +30,39 @@ myApp.config(function ($routeProvider, $locationProvider) {
     });
 });
 
-myApp.controller("DashboardController", function ($scope) {
+myApp.controller("DashboardController", function ($scope, $location) {
+    $scope.path = $location.path();
+    //checkUrl(upath);
     console.log("in dashboard")
     $scope.message = "I am is Dashboard View"
 });
-myApp.controller("NamespacesController", function ($scope) {
+myApp.controller("NamespacesController", function ($scope, $location) {
+    $scope.path = $location.path();
+    //checkUrl(upath);
     console.log("namespaces")
     $scope.message = "I am is Namespace View"
 });
 
-myApp.controller("AccountDetailsController", function ($scope) {
+myApp.controller("AccountDetailsController", function ($scope, $location) {
     console.log("account")
-
+    $scope.path = $location.path();
+    //checkUrl(upath);
     $scope.message = "I am is AccountDetails View"
 });
-myApp.controller("PaymentController", function ($scope) {
+myApp.controller("PaymentController", function ($scope, $location) {
     console.log("payment")
-
+    $scope.path = $location.path();
+    //checkUrl(upath);
     $scope.message = "I am is Payment View"
 });
+
+//function checkUrl(path) {
+//    console.log(path)
+//    var preselected = angular.element(document.getElementsByClassName(".active"));
+//    preselected.removeClass('active');
+//    id = path == "/" ? "#dashboard" : path == "/Namespaces" ? "#namespaces" : path == "/UserManagement" ? "user" : path == "/AccountDetails" ? "#account" : "#payment";
+//    console.log(id);
+//    var myElement = angular.element( document.querySelector(id) );
+//    myElement.addClass('active');
+
+//}
