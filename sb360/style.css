@@ -164,3 +164,119 @@
 .active{
     background-color:#475e77;
 }
+.scrollPanel{
+    position: absolute;
+    left: 0;
+    top: 50px;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+}
+.accntContainer{
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    max-width: 100%;
+    outline: 0;
+    direction: ltr;
+}
+
+.top-label{
+        background: #a9a9a9;
+    height: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.accnt-box {
+    margin-top:1.3%;
+    height: 390px;
+    width: 530px;
+    margin-right: 25px;
+    float: left;
+    display: block;
+    padding: 15px 12px;
+    border: #dadada solid 1px;
+    box-shadow: #e0e0e0 0 0 11px;
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+}
+.accnt-profile {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #e0e0e0;
+    margin: 10px auto 10px auto;
+    border: #d0d0d0 solid 1px;
+    overflow: hidden;
+    text-align: center;
+}
+.accnt-profile .fa{
+    font-size: 95px;
+    padding-top: 15px;
+    color: #989898;
+}
+.accnt-name{
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    padding: 5px 0 2px 0;
+}
+.accnt-type{
+    text-align: center;
+    font-size: 14px;
+    color: #828282;
+    padding-bottom: 10px;
+    border-bottom: #eaeaea solid 1px;
+}
+.accnt-details{
+        padding: 10px 0;
+    border-bottom: #eaeaea solid 1px;
+}
+.accnt-td-one {
+    text-align: left;
+    font-weight: 600;
+    float: left;
+    width: 30%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-left:15px;
+}
+.accnt-td-two{
+    text-align: right;
+    float: right;
+    width: 70%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-right:15px;
+}
+.accnt-close-btn{
+    width:100%;
+    background: #eb6969;
+    color: #fff;
+    box-shadow: none;
+    border: #eb6969 solid 1px;
+}
+.accnt-term-text{
+    text-align: center;
+    color: #888;
+    padding-top:2%;
+
+}
+.accnt-term-text a{
+    color: #44abed;
+    text-decoration: none;
+}
+.accnt-licence{
+    text-align:left;
+    padding: 5px 0 10px 0;
+    margin-bottom: 10px;
+    color: #787878;
+    font-weight: 500;
+    font-size: 16px;
+    border-bottom: #eaeaea solid 1px;
+}
