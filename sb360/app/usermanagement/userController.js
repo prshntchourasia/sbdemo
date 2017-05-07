@@ -24,7 +24,6 @@ myApp.controller("UserManagementController", function ($scope, UserApi) {
             };
             UserApi.AddUser(UserToAdd)
             .then(function (response) {
-                alert("user added");
                 $scope.fname = undefined;
                 $scope.lname = undefined;
                 $scope.email = undefined;

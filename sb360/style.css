@@ -161,6 +161,9 @@
 .sidenav-btn:hover {
     background-color: #384049;
 }
+.user-management:hover{
+    background-color:#f0f0f0;
+}
 .active{
     background-color:#475e77;
 }
@@ -279,4 +282,17 @@
     font-weight: 500;
     font-size: 16px;
     border-bottom: #eaeaea solid 1px;
+}
+.dropdown-pos{
+    margin-left: -20% !important;
+    width: 200px !important;
+}
+#scrollArea {
+  width: 1351px !important;
+  /*overflow: auto;*/
+}
+
+#announcements {
+  display: block;
+  margin-left: 3000px;
 }

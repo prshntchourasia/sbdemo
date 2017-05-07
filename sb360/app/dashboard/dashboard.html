@@ -1,10 +1,21 @@
 ﻿<header style="background-color:#fafafa; border-bottom: #f0f0f0 solid 1px;min-height: 50px;">
     <div class="container-fluid">
-        <h4>Setting Dashboard</h4>
+        <h4 style="float:left;padding-left:10px;">Setting Dashboard</h4>
     </div>
 </header>
-<div class="container-fluid">
-    
+<div class="container">
+    <div class="top-label"style="margin-top:8%;background:#f0f0f0;width:83.4%;margin-left:7.2%;"></div>
+    <table class="table" style="border:#f0f0f0 solid 1px;margin-left:-3%; margin-top:2%;">
+        <tbody>
+            <tr>
+                <td align="left" class="user-management">
+                    <a href="UserManagement">
+                        <i class="fa fa-check-circle" style="color:#52c0ac; font-size:18px;"></i>
+                        <span style="margin-left:1%;">Users</span>
+                        <span style="margin-left:9%;">{{users.length}}</span>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </div>
-
-<h1>{{message}}</h1>

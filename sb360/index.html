@@ -22,53 +22,55 @@
          <img src="content/images/logo.png" class="logo-size" />
         <ul class="nav navbar-nav " style="margin-right:0%; float:right">
             <li class="plan-box"><span class="plan-text">License Plan: Free<a href="Payment" class="nav-plan" role="button" >CHANGE PLAN</a></span></li>
-            <li title="Announcements"><a href="#"><i class="fa fa-bullhorn bell-align" aria-hidden="true" ></i></a></li>
-            <li title="Notifications"><a href="#"><i class="fa fa-bell bell-align"></i></a></li>
-            <li title="Settings"><a href="#"><i class="fa fa-gear bell-align"></i></a></li>
-            <li title="prshntchourasiagmail.com">
-                <a style="vertical-align:15% !important; height:40px !important;" id="menu1" data-toggle="dropdown" >
+            <li title="Announcements"><a ng-click="shiftScroll()"><i class="fa fa-bullhorn bell-align" aria-hidden="true" ></i></a></li>
+            <li title="Notifications"><a ng-click="shiftScroll()"><i class="fa fa-bell bell-align"></i></a></li>
+            <!--<li title="Settings"><a href="#"><i class="fa fa-gear bell-align"></i></a></li>-->
+            <li title="prshntchourasia@gmail.com">
+                <a style="vertical-align:15% !important; height:40px !important; background-color:#3c454f !important;" id="menu1" data-toggle="dropdown" >
                     <span style="">prshntchouras...</span>
                     <i class="fa fa-user-circle-o bell-align" aria-hidden="true" ></i>
+                    <span class="caret"></span>
                 </a>
-                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">HTML</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">CSS</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">JavaScript</a></li>
-                    <li role="presentation" class="divider"></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">About Us</a></li>
+                <ul class="dropdown-menu dropdown-pos" role="menu" aria-labelledby="menu1">
+                    <li role="presentation"><a role="menuitem" tabindex="-1"  href="AccountDetails"><i class="fa fa-user"></i>&nbsp;&nbsp;&nbsp;&nbsp;My Profile</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="http://assist.servicebus360.com/support/login" target="_blank"><i class="fa fa-life-ring"></i>&nbsp;&nbsp;&nbsp;&nbsp;Support</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="http://assist.servicebus360.com/support/home" target="_blank"><i class="fa fa-file-text-o"></i>&nbsp;&nbsp;&nbsp;&nbsp;Documentation</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="http://assist.servicebus360.com/discussions/forums/1000229214"><i class="fa fa-heart"></i>&nbsp;&nbsp;&nbsp;&nbsp;Submit an Idea</a></li>
+                    <li class="divider"></li>
+                    <li><a><i class="fa fa-sign-out"></i>&nbsp;&nbsp;&nbsp;&nbsp;Logout</a></li>
                 </ul>
             </li>
         </ul>
     </div>
     <div class="container-fluid text-center">
-        <div class="sidenav" style="width:68px;">
+        <div auto-active class="sidenav" style="width:68px; z-index: 10;">
                 
-                <div class="sidenav-btn" ng-class="{active: path == 'someothervalue'}"}" id="dashboard" style="margin-left:-8px;margin-top:10px;">
-                    <a href="/">
+                <div class="sidenav-btn" ng-class="getClass('/Dashboard')" id="dashboard" style="margin-left:-8px;margin-top:10px;">
+                    <a href="/Dashboard">
                         <i class="fa fa-tachometer icon-size" aria-hidden="true">
                             <span class="icon-text" style="font-size:10px; color:#d1d8e0; display:block;">Settings Dashboard</span>
                         </i>
                     </a>
                 </div>
-                <div class="sidenav-btn" id="namespaces" style="padding-top:20px;margin-left:-8px;">
+                <!--<div class="sidenav-btn" ng-class="getClass('/Namespaces')" id="namespaces" style="padding-top:20px;margin-left:-8px;">
                     <a  href="Namespaces">
                         <i class="fa fa-id-card icon-size" aria-hidden="true"></i>
                             <span class="icon-text" style="font-size:10px; color:#d1d8e0; display:block; width:111%">Namespaces</span>
                     </a>
-                </div>
-                <div class="sidenav-btn" id="user" style="padding-top:20px;margin-left:-8px;">
+                </div>-->
+                <div class="sidenav-btn" ng-class="getClass('/UserManagement')" id="user" style="padding-top:20px;margin-left:-8px;">
                     <a href="UserManagement">
                         <i class="fa fa-users icon-size" aria-hidden="true"></i>
                             <span class="icon-text" style="font-size:10px; color:#d1d8e0; display:block; width:100%;margin-left:4%;">User Management</span>
                     </a>
                 </div>
-                <div class="sidenav-btn" id="account" style="padding-top:20px;margin-left:-8px;">
+                <div class="sidenav-btn" ng-class="getClass('/AccountDetails')" id="account" style="padding-top:20px;margin-left:-8px;">
                     <a href="AccountDetails">
                         <i class="fa fa-newspaper-o icon-size" aria-hidden="true"></i>
                         <span class="icon-text" style="font-size:10px; color:#d1d8e0; display:block; width:90%;margin-left:8%;margin-top:-6%">Account Details</span>
                     </a>
                 </div>
-                <div class="sidenav-btn" id="payment" style="padding-top:20px;margin-left:-8px;">
+                <div class="sidenav-btn" ng-class="getClass('/Payment')" id="payment" style="padding-top:20px;margin-left:-8px;">
                     <a href="Payment">
                         <i class="fa fa-money icon-size" aria-hidden="true"></i>
                         <span class="icon-text" style="font-size:10px; color:#d1d8e0; display:block; width:155%;margin-left:-20%;">Payment</span>
@@ -77,51 +79,23 @@
             </div>
         <div class="row">
             <!-- ng-view -->
-            <div class="" style="width:1351px; padding-top:3%;padding-left:4%; border-right:1px solid;">
+            <div class="" id="scrollArea" style="width:1351px; padding-top:3%;padding-left:4%; border-right:#f0f0f0 solid 1px;">
                 <div ng-view>
 
                 </div>
             </div>
-            <!--<div>
-                <div class="container">
-                    <h2>Horizontal form</h2>
-                    <form class="form-horizontal" action="/action_page.php">
-                        <div class="form-group">
-                            <label class="control-label col-sm-2" for="email">Email:</label>
-                            <div class="col-sm-10">
-                                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label col-sm-2" for="pwd">Password:</label>
-                            <div class="col-sm-10">
-                                <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-offset-2 col-sm-10">
-                                <div class="checkbox">
-                                    <label><input type="checkbox" name="remember"> Remember me</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-offset-2 col-sm-10">
-                                <button type="submit" class="btn btn-default">Submit</button>
-                            </div>
-                        </div>
-                    </form>
+            <!--<div id="announcements" style="width:600px; margin-left:1351px;height:400px;margin-top:-54.3%;" ng-show="rightbox">
+                <div style="background-color:#fff; border-bottom: #f0f0f0 solid 1px;border-left:#f0f0f0 solid 1px; min-height: 50px;">
+                    <div class="container-fluid">
+                        <h4 style="float:left; margin-top:18px; margin-left: 12px;">Announcement</h4>
+                    </div>
                 </div>
             </div>-->
+
+
         </div>
     </div>
-    
-    <!--<script>
-        $('.sidenav-btn').click(function () {
-            $('.sidenav-btn').removeClass('active');
-            $(this).addClass('active');
-        });
-    </script>-->    
+       
 </body>
 
 </html>
