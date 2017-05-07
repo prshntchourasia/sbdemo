@@ -6,7 +6,6 @@ myApp.controller("UserManagementController", function ($scope, UserApi) {
         UserApi.getUsers()
            .then(function (response) {
                $scope.users = response.data;
-               console.log($scope.users);
            })
             .catch(function (response) {
                 console.error('Users error', response.status, response.data);

@@ -36,7 +36,6 @@ myApp.controller("DashboardController", function ($scope, $location, UserApi) {
         UserApi.getUsers()
            .then(function (response) {
                $scope.users = response.data;
-               console.log($scope.users);
            })
             .catch(function (response) {
                 console.error('Users error', response.status, response.data);
@@ -46,8 +45,6 @@ myApp.controller("DashboardController", function ($scope, $location, UserApi) {
             });
     }
     //checkUrl(upath);
-    console.log("in dashboard")
-    $scope.message = "I am is Dashboard View"
 });
 myApp.controller("NamespacesController", function ($scope, $location) {
     $scope.path = $location.path();
@@ -69,7 +66,6 @@ myApp.controller("PaymentController", function ($scope, $location) {
 
 myApp.run(function ($rootScope, $location, $anchorScroll) {
     $rootScope.getClass = function (path) {
-        console.log(path);
         current_path = $location.path().substr(0, path.length);
             return ($location.path().substr(0, path.length) === path) ? 'active' : '';
     }
